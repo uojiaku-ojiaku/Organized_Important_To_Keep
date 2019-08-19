@@ -1,0 +1,60 @@
+<!-- Best Practice Disclaimer Set Up -->
+
+<div class="disclaimer">
+    <p class="disclaimer-text">
+               {% if override_disclaimer %}
+               {{ override_disclaimer }}
+               {% else %}
+               {{ organization.disclaimer }} {{ additional_disclaimer }}
+               {% endif %}
+    </p>
+</div>
+
+Disclaimers:
+"Example based on $0 down payment, no closing costs, 30-year fixed-rate mortgage."
+standard_long_version
+Informational_Purposes_Flyer
+Organization _Names/Logos
+RELEVANT STATE DISCLOSURES (STATE_California_Bakersfield for users in CCM Mortgage org)
+
+<!-- the statements above would equate to... -->
+
+<!-- Change state disclaimer language or Add/Remove disclaimers per flyer requirements -->
+{% capture template_disclaimers %} 
+Example based on $0 down payment, no closing costs, 30-year fixed-rate mortgage. 
+{{ organization.disclaimers.standard_long_version.content }} 
+{{ organization.disclaimers.Informational_Purposes_Flyer.content }} 
+{{ organization.disclaimers.Organization _Names/Logos.content }} 
+{% include 'state_disclaimer_logic_english' %}
+{% endcapture %}
+
+{% assign template_disclaimer = template_disclaimers %}
+
+<!-- from snippet  -->
+
+<div>{{ template_disclaimer }} {{ comarketer.disclaimer }} {{ media.org_ref_number }}</div>
+
+<!-- Variable disclaimers -->
+
+<div class="disclaimer">
+    <div class="disclaimer-text">
+        <div class="eh-logo contain-image"></div>
+        <p class="variable-disclaimer">
+            
+            {% if variable_disclaimer %}{{variable_disclaimer}}{% else %}{{ organization.disclaimers.Long_Disclaimer.content }}{% endif %}</p>
+    </div>
+</div>
+
+<!-- Another disclaimer example -->
+
+{% capture override_disclaimers %} 
+Example based on $0 down payment, no closing costs, 30-year fixed-rate mortgage. 
+{{ organization.disclaimers.standard_long_version.content }} 
+{{ organization.disclaimers.Informational_Purposes_Flyer.content }} 
+{{ organization.disclaimers.Organization _Names/Logos.content }} 
+{% include 'state_disclaimer_logic_english' %}
+{% endcapture %}
+
+<!-- HOWEVER, DO NOT TAB ENTER. MAKE LIQUID LOGIC ALL ON ONE LINE -->
+
+{% assign override_disclaimer = override_disclaimers %}

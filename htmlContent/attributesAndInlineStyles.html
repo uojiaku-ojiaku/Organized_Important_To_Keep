@@ -1,0 +1,48 @@
+<!-- Inline Background Images -->
+<div class="booklet-content cover-image" style="background-image: url('https://totalexpert.net/media/assets/images/g-rate/grate-book-buyers-guide-0953-cb1.jpg');"></div>
+<div class="brochure cover-image" style="background-image: url('https://totalexpert.net/media/');"></div>
+<div class="lender-photo" style="background-image: url('{{ comarketer.settings.profile_image }}');"></div>
+
+<!-- Background Image Path for S3 -->
+https://totalexpert.net/media/template-assets/ksb/assets/images/ksb/BACKGROUND-IMAGE.jpg
+
+<!-- Background Image Path for S3 - Second option -->
+https://totalexpert.net/media/template-assets/xyz/assets/images/xyz/
+
+replace xyz in BOTH places with the org abbreviation (aka the folder your working inside in media_dcd)
+
+____________________________________________________________________________________________________________________________
+
+<!-- Applying Text Fill -->
+
+    <!-- REMEMBER TO WRAP CONTENT IN A SPAN TAG -->
+    <div class="exec-name social-text text-fill" data-max-font-size="115" data-min-font-size="80"><span>{{comarketer.name}}</span></div>
+    
+    <!-- And remember to put an inline width, defining how far out you want the textfill to go -->
+    <p class="email text-fill" data-max-font-size="7.5" data-min-font-size="6.5" style="width:36mm">
+    
+    <!-- you cant do text fill and editable at the same time!!!!  -->
+    <div class="lo-name text-fill" data-max-font-size="67" data-min-font-size="30" style="width:750px;height:120px;"><span>{{ comarketer.name }}</span></div>
+    <!-- sometimes you'll need to add a height to also get things working-->
+    <!-- Also, text fill needs to be in points, not pixels for fonts  -->
+
+____________________________________________________________________________________________________________________________
+
+Editable-ness
+
+    <div class="editable"></div>
+    <div class="editable-image"></div>
+
+____________________________________________________________________________________________________________________________
+
+<!-- Relevant URL Paths -->
+
+<!-- Place holder images url -->
+https://totalexpert.net/images/media-placeholder-img.png
+
+____________________________________________________________________________________________________________________________
+
+<!-- HTML Entities -->
+
+<!-- Non Breaking Spaces and bullet points -->
+<div class="lo-title-nmls"> {{ comarketer.job_title }}  &nbsp; &bull; &nbsp; NMLS #{{ comarketer.license_title }}</div>

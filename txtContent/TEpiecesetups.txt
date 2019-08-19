@@ -1,0 +1,28 @@
+FOR HOSTED DOWNLOADED CONTENT
+    Check yes ---> Hosted Downloaded Content on Media
+
+    then...
+    Set up folder structure like so...
+    template name (folder)
+        > preview.jpg
+        > assets (folder)
+            > content (folder)
+                > powerpoint.ppt
+            > css (folder)
+                > colors (folder)
+                    > default.css
+                > style.css
+
+FOR HYPERLINKING MEDIA NAME TO POPULATE A PDF PAGE
+    When creating a template in TE...
+        Select Type: Download PDF
+        then check Download/View Link
+        Besides the system name, leave everything else blank
+
+    When creating the media for said template...
+        Fill out parameters as normal
+        However, add the following
+        Download/View Link Text: Write "Download PDF"
+        External Content URL: Write the path to where you can find the pdf. 
+        For example, https://totalexpert.net/media/dkmc-static-agent-sheets-frequently-asked-questions/sample.pdf
+

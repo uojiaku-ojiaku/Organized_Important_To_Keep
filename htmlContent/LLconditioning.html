@@ -1,0 +1,12 @@
+<div class="right-side-content">
+    {% if comarketer.logo_image and comarketer.logo_image != 'https://totalexpert.net/images/media-placeholder-img.png' %}
+    <div class="company-logo contain-image editable-image" style="background-image: url('{{ comarketer.logo_image }}');"></div>
+    {% else %}
+    <div class="company-logo contain-image editable-image" style="background-image: url('https://totalexpert.net/media/assets/images/far/rsb-logo-black.png');"></div>
+    {% endif %}
+    
+    <div class="address">
+    <p>{{comarketer.settings.address}}{% if comarketer.settings.address_two %}, {{comarketer.settings.address_two}}{% endif %}</p>
+    <p>{{comarketer.settings.city}}, {{comarketer.settings.state}} {{comarketer.settings.zipcode}}</p>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+Abbreviations
+
+LL - liquid logic
+TE - Total Expert
+
+
+Git Commands
+git fetch && git checkout ugonna-work

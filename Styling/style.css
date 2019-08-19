@@ -1,0 +1,32 @@
+.cover-image {
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size:cover;
+}
+.profile-img{
+     background-repeat: no-repeat;
+    background-position: top center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size:contain;
+}
+.contain-image {
+    background-repeat: no-repeat;
+    background-position: top center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size:contain;
+}
+p{
+    margin:0;
+    padding: 0;
+}
+
+/* logos -> contain-image
+background images -> cover-image 
+profile pictures -> profile-img */

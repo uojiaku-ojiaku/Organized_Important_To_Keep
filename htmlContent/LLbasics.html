@@ -1,0 +1,41 @@
+<!-- All templates need this -->
+{{ template.stylesheets }}
+
+<!-- Always assign before inlcuding -->
+
+{{ template.stylesheets }}
+{% assign background_image = 'https://totalexpert.net/media/assets/images/ehm/survey-for.jpg' %}
+{% assign flyer_header = 'true' %}
+{% assign footer_override = 'EHM_flyer_footer_lennar_sb' %}
+
+{% include 'EHM_flyer_full_sb' %}
+
+<!-- Including Snippets -->
+{% include 'FHM_flyer_static_cb' %}
+
+<!-- Address. Put it in two seperate p tags if you want it in two lines --> 
+{{comarketer.settings.address}}{% if comarketer.settings.address_two %}, {{comarketer.settings.address_two}}{% endif %} 
+{{comarketer.settings.city}}, {{comarketer.settings.state}} {{comarketer.settings.zipcode}}
+
+<!-- How to toggle a snippet -->
+<!-- Find targetted toggle in template snippet under super admin. For example see below -->
+{% if user_bio == 'true' %}
+
+<!-- If statements, that appear if content is there and dissapear if content is not -->
+
+{% if comarketer.phone_cell %}
+        <p>direct: {{comarketer.phone_cell}}</p>
+{% endif %}
+
+<!-- or -->
+
+<p>{% if comarketer.phone_cell %}direct: {{comarketer.phone_cell}}{% endif %}</p>
+<p><br>{% if comarketer.phone_cell %}direct: {{comarketer.phone_cell}}{% endif %}</p>
+
+<!-- Formatting Time -->
+
+{{ "template.timestamp" | date: "%m/%d/%Y"}}
+or 
+{{ "now" | date: "%m/%d/%Y"}}
+or 
+{{ "today" | date: "%m/%d/%Y"}}

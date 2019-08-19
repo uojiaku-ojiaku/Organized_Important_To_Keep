@@ -1,0 +1,2 @@
+GRA disclaimers
+{% assign top_disclosure = '{{ organization.disclaimers.BASIC-S.content }}<br>{{ organization.disclaimers.GOV-1-S.content }}' %}
