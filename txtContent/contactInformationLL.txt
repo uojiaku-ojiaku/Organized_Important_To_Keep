@@ -92,9 +92,14 @@ Do not use comarketer.organization.logo_img
 Instead, use either 
 {‌{comarketer.settings.logo_image}‌} or {‌{comarketer.logo_image}‌}
 
+{% include 'AHL_Branding' %}
+<div class="company-logo contain-image" style="background-image: url('{{ brand_user_logo }}');">
+
 <!-- Address. Put it in two seperate p tags if you want it in two lines --> 
 {{comarketer.settings.address}}{% if comarketer.settings.address_two %}, {{comarketer.settings.address_two}}{% endif %} 
 {{comarketer.settings.city}}, {{comarketer.settings.state}} {{comarketer.settings.zipcode}}
+
+license_title
 
 AGENT
     access_key: "8a809a40880ea5d19"
